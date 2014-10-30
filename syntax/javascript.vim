@@ -36,8 +36,8 @@ hi link shebang Comment
 
 " Statement Keywords {{{
 syntax keyword javaScriptSource         import export
-syntax keyword javaScriptIdentifier     arguments this let var void yield
-syntax keyword javaScriptOperator       delete new instanceof typeof
+syntax keyword javaScriptIdentifier     arguments this let var void yield await
+syntax keyword javaScriptOperator       delete new instanceof typeof async get set constructor
 syntax keyword javaScriptBoolean        true false
 syntax keyword javaScriptNull           null undefined
 syntax keyword javaScriptMessage        alert confirm prompt status
@@ -51,7 +51,7 @@ syntax keyword javaScriptPrototype      prototype
 syntax keyword javaScriptStatement      return with
 syntax keyword javaScriptGlobalObjects  Array Boolean Date Function Math Number Object RegExp String
 syntax keyword javaScriptExceptions     try catch throw finally Error EvalError RangeError ReferenceError SyntaxError TypeError URIError
-syntax keyword javaScriptReserved       abstract enum int short boolean export interface static byte extends long super char final native synchronized class float package throws const goto private transient debugger implements protected volatile double import public
+syntax keyword javaScriptReserved       abstract enum int short boolean export interface static byte extends long super char final native synchronized class float package throws const goto private transient debugger implements protected volatile double import public from
 "}}}
 " Comments {{{
 syntax keyword javaScriptCommentTodo      TODO FIXME XXX TBD contained
@@ -179,7 +179,7 @@ syntax match   javaScriptFunctionKey     /\<[a-zA-Z_$][0-9a-zA-Z_$]*\>\(\s*:\s*f
 " Braces, Parens, symbols, colons {{{
 syntax match javaScriptBraces       "[{}\[\]]"
 syntax match javaScriptParens       "[()]"
-syntax match javaScriptOpSymbols    "=\{1,3}\|!==\|!=\|<\|>\|>=\|<=\|++\|+=\|--\|-="
+syntax match javaScriptOpSymbols    "=\{1,3}\|!==\|!=\|<\|>\|>=\|<=\|++\|+=\|--\|-=\|=>"
 syntax match javaScriptEndColons    "[;,]"
 syntax match javaScriptLogicSymbols "\(&&\)\|\(||\)"
 "}}}
